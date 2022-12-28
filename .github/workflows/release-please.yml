@@ -11,5 +11,5 @@ jobs:
         with:
           release-type: node
           versioning-strategy: | 
-            ci/release-please-configuration/versioning-strategy.ts
+            ci/release-please-configuration/webapp3-strategy.ts
           package-name: release-please-action
