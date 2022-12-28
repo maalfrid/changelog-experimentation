@@ -10,4 +10,5 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         with:
           release-type: node
+          versioning-strategy: ci/release-please-configuration/versioning-strategy.ts
           package-name: release-please-action
