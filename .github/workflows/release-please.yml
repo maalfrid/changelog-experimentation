@@ -7,6 +7,13 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
+      - name: Get the app version
+      - run: |
+          VERSION=$(node -p "require('../../package.json').version") \
+          echo "${VERSION}" >> $GITHUB_ENV
+      - name: Create/update changelog pull request
       - uses: google-github-actions/release-please-action@v3
         with:
-          command: manifest
+          release-type: node
+          package-name: release-please-action
+          release-as: ${{ env.$VERSION }}
