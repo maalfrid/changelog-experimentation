@@ -14,4 +14,4 @@ jobs:
         with:
           release-type: node
           package-name: release-please-action
-          release-as: ${{ env.$VERSION }}
+          release-as: "${{ env.$VERSION }}"
