@@ -9,9 +9,9 @@ jobs:
     steps:
       - run: |
           VERSION=$(node -p "require('../../package.json').version") \
-          echo "${VERSION}" >> $GITHUB_ENV
+          echo "{VERSION}" >> $GITHUB_ENV
       - uses: google-github-actions/release-please-action@v3
         with:
           release-type: node
           package-name: release-please-action
-          release-as: "${{ env.$VERSION }}"
+          release-as: "${{ env.VERSION }}"
