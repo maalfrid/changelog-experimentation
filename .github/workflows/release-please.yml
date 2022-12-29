@@ -18,7 +18,7 @@ jobs:
             package_json = json.load(file)
           with open(github_env, "a") as file:
             file.write("app_version=" + package_json['version'] + "")
-          print("app_version" + package_json['version'] + "is saved to GITHUB_ENV")
+          print("app_version = " + package_json['version'] + " is saved to GITHUB_ENV")
         shell: python
       - uses: google-github-actions/release-please-action@v3
         with:
