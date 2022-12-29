@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.0.0](https://github.com/maalfrid/changelog-experimentation/compare/v1.0.0...v2.0.0) (2022-12-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* trigger a new major bump
+
+### Features
+
+* bump main version ([19bb37b](https://github.com/maalfrid/changelog-experimentation/commit/19bb37b0cdb56ea1b66ab08878b7a1a365aa7f48))
+* empty commit ([a05f561](https://github.com/maalfrid/changelog-experimentation/commit/a05f561fef81e9873c8ef7e6239423e7688c11ae))
+* trigger a new major bump ([d953210](https://github.com/maalfrid/changelog-experimentation/commit/d953210d6cbf73fb7fbe98b2e0e41f62c5783e85))
+
 ## 1.0.0 (2022-12-28)
 
 
