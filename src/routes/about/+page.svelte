@@ -6,7 +6,5 @@
 <div class="text-column">
 	<h1>About this app</h1>
 
-	<p>
-		This is an app to test automatic generation of changelogs from conventional commits.  
-	</p>
+	<p>This is an app to test automatic generation of changelogs from conventional commits.</p>
 </div>
