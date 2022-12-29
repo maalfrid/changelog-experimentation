@@ -8,8 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          VERSION=$(node -p "require('./package.json').version") \
-          echo "app_version=$VERSION" >> $GITHUB_ENV
+          import os
+          import json
+          github_env = os.getenv('GITHUB_ENV')
+          with open('./package.json') as file:
+            package_json = json.load(file)
+          with open(github_env, "a") as file:
+            file.write("app_version=" + package_json['version'] + "")
+        shell: python
       - uses: google-github-actions/release-please-action@v3
         with:
           release-type: node
