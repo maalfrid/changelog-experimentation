@@ -4,7 +4,7 @@
 </svelte:head>
 
 <div class="text-column">
-	<h1>About this app</h1>
+	<h1>About this app ℹ️</h1>
 
 	<p>This is an app to test automatic generation of changelogs from conventional commits.</p>
 </div>
