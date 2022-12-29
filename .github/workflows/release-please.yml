@@ -1,7 +1,8 @@
 on:
   push:
     branches:
-      - main
+      - 'main'
+      - 'releases/**'
 name: release-please
 jobs:
   release-please:
@@ -9,7 +10,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Save package.json version to GITHUB_ENV
+
+      - name: Save package.json info to GITHUB_ENV
         run: |
           import os
           import json
@@ -18,10 +20,12 @@ jobs:
             package_json = json.load(file)
           with open(github_env, "a") as file:
             file.write("app_version=" + package_json['version'] + "")
+            file.write("app_name=" + package_json['name'] + "")
           print("app_version = " + package_json['version'] + " is saved to GITHUB_ENV")
         shell: python
+
       - uses: google-github-actions/release-please-action@v3
         with:
           release-type: node
-          package-name: release-please-action
+          package-name: "${{ env.app_name }}"
           release-as: "${{ env.app_version }}"
