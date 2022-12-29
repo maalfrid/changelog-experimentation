@@ -1,3 +1,4 @@
+name: Convert conventional commits into Changelog 
 on:
   push:
     branches:
@@ -28,4 +29,6 @@ jobs:
         with:
           release-type: node
           package-name: "${{ env.app_name }}"
+          component: "${{ env.app_name }}"
           release-as: "${{ env.app_version }}"
+          default-branch: "${{ github.ref_name }}"
